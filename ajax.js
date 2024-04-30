@@ -15,7 +15,9 @@ const pokemonCards = () => {
         success: function (data) {
             //parametro
             console.log(data);
-
+            //contador de tarjetas
+            let counter = 0;
+            let maxCards = 15;
             for (x of data.results) {
                 //console.log(x.name + ' ' + x.url);
 

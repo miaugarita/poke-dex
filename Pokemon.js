@@ -57,42 +57,51 @@ class Pokemon {
                                 str_habilidad += typeName + ", ";
                             });
 
+                            // peso
+                            let str_peso = "";
+                            data2.abilities.forEach((element) => {
+                                const typeName = element.weight; // Obtener el nombre del tipo
+                                // console.log("peso:", typeName); // Imprimir el nombre del tipo
+                                str_peso += typeName + ", ";
+                            });
+
                             // Crea un nuevo elemento de tarjeta
                             const div = document.createElement('div');
                             div.classList.add('div');
 
                             // Crea la estructura interna de la tarjeta utilizando HTML
                             div.innerHTML = `
-                                <div class="card card-widget widget-user">
-                                    <div class="widget-user-header bg-info">
+                                <div class="card card-widget widget-user" style="background-color: #000; color: #ffff">
+                                    <div class="widget-user-header bg-dark">
                                         <h4 class="widget-user-username" >${data2.name}</h4>
-                                        <p class="widget-user-desc">${str_types}CEO</p>
+                                        <p class="widget-user-desc">${str_types}</p>
                                     </div>
-                                    <div class="widget-user-image">
-                                        <img class="img-circle elevation-2" src="${data2.sprites.other.dream_world.front_default}"  alt="${data2.name}" style=" width: 100px; height: 100px" alt="User Avatar">
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="row">
-                                            <div class="col-sm-4 border-right">
-                                                <div class="description-block">
-                                                    <h5 class="description-header">3,200</h5>
-                                                    <span class="description-text">SALES</span>
+                                    <center>
+                                        <div class="widget-user-image">
+                                            <img class="img-circle elevation-2" src="${data2.sprites.other.dream_world.front_default}"  alt="${data2.name}" style=" width: 100px; height: 100px" alt="User Avatar">
+                                        </div>
+                                        <hr>
+                                        <div class="card-footer">
+                                            <div class="row">
+                                                <div class="col border-right">
+                                                    <div class="description-block">
+                                                        <h5 class="description-header">${data2.weight}</h5>
+                                                        <span class="description-text">hg</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-sm-4 border-right">
-                                                <div class="description-block">
-                                                    <h5 class="description-header">13,000</h5>
-                                                    <span class="description-text">${str_habilidad}</span>
-                                                </div>
-                                            </div>  
-                                            <div class="col-sm-4">
-                                                <div class="description-block">
-                                                    <h5 class="description-header">35</h5>
-                                                    <span class="description-text">PRODUCTS</span>
+                                                <div class="col border-right">
+                                                    <div class="description-block">
+                                                        <h5 class="description-header">${data2.height}</h5>
+                                                        <span class="description-text">dam</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </center>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">An item</li>
+                                        
+                                    </ul>
                                 </div>                                                          
                                         `;
 

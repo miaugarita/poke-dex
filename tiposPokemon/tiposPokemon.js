@@ -173,7 +173,7 @@ class TiposPokemon {
 
                     // Crear un botón para cada tipo de Pokémon
                     const button = document.createElement('button');
-                    button.classList.add('btn', 'mr-2', 'mb-2');
+                    button.classList.add('btn', 'mr-8', 'mb-2');
                     button.textContent = nombreTipoPokemon;
 
                     // Asignar un color al botón según el tipo de Pokémon
